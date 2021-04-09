@@ -10,9 +10,9 @@ function addGif(res) {
 }
 
 $form.on("submit", async function getGiphy(e) {
-  e.preventDefault;
-  const userInput = $input.val();
-  $input.val("");
+  console.log(e);
+  e.preventDefault();
+  
   const res = await axios.get("http://api.giphy.com/v1/gifs/search", {
     params: { q: userInput, api_key: "5kqOJ0P9BZz3hE8pgl9dkZwb0xD0CWDy" },
   });
